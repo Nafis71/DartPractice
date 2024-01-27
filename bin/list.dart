@@ -66,4 +66,9 @@ void main() {
   print(city.toString());
   //printing mixedList
   print("Mixed List: " + mixedList.toString());
+
+  //another way of creating list in dart
+  var list = List.empty(growable: true);
+  list.add("Rupanti");
+  print(list);
 }
