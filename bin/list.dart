@@ -57,10 +57,13 @@ void main() {
      to add new value at a specific index in a list we have to use insert
      method.
    */
-  city.insert(2, "Magura");
+  city.insert(2, "Magura"); // adding one element
+  city.insertAll(2, constantList); //adding another list at 2nd index
   print(city.toString());
 
-
+  //updating a particular index value in a list
+  city[0]="updation";
+  print(city.toString());
   //printing mixedList
   print("Mixed List: " + mixedList.toString());
 }
