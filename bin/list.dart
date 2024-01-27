@@ -1,4 +1,5 @@
 var city = ["Dhaka", "Mymenshingh", "Rajshahi", "Barishal"];
+var mixedList = ["Dhaka",1200];
 
 void main() {
   //printing all elements from city list
@@ -16,4 +17,7 @@ void main() {
 
   //getting the length of the list
   print('The length of the list: ' + city.length.toString());
+
+  //printing mixedList
+  print("Mixed List: "+ mixedList.toString());
 }
