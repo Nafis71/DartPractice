@@ -12,7 +12,7 @@ void main() {
   var start = 0; //starting from 0 index
   var end = 2; //ending at 2 index;
 
-  //getting 2 values from the list which 0 and 1 index.
+  //getting 2 values from the list which is 0 and 1 index.
   print("Ranged Values : " + city.getRange(start, end).toString());
 
   //getting the length of the list
@@ -45,6 +45,21 @@ void main() {
 
   //fixed list can be created by adding const/final keyword
   const constantList = ["Jamalpur","Mirpur","Dhanmondi"];
+
+  //adding two lists into one
+  var addedList = city + constantList;
+  //or
+  city.addAll(constantList);
+  print("Concated List: "+ addedList.toString());
+  print("Concated List: "+ city.toString());
+
+  /* List add method will push the newly added value at the end of the list
+     to add new value at a specific index in a list we have to use insert
+     method.
+   */
+  city.insert(2, constantList[0]);
+  print(city.toString());
+
 
   //printing mixedList
   print("Mixed List: " + mixedList.toString());
