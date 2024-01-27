@@ -22,4 +22,34 @@ main() {
   } else {
     print("The map is not empty");
   }
+
+  //adding new key to the map
+  student['University'] = "Bubt";
+  print(student);
+
+  //creating map with constructor;
+  var person = new Map(); //  or typecasting - Map<String,String> person =  new Map();
+
+  //adding key and value to the map
+  person.putIfAbsent("name", () => "Tonmoy");
+  person.putIfAbsent("age", () => 24);
+
+  //adding student map in person map
+
+  /*
+  if we add map a to map b then all duplicate keys of map b will be
+  replaced by map a's key and value pair.
+  Here map a is student and map b is person.
+   */
+  person.addAll(student);
+  print(person);
+
+  //to remove specific key from map;
+  person.remove("age");
+  print(person);
+
+
+  //clear map
+  person.clear();
+  print(person);
 }
