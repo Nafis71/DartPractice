@@ -57,7 +57,7 @@ void main() {
      to add new value at a specific index in a list we have to use insert
      method.
    */
-  city.insert(2, constantList[0]);
+  city.insert(2, "Magura");
   print(city.toString());
 
 
