@@ -44,14 +44,14 @@ void main() {
   print("New List: " + city.toString());
 
   //fixed list can be created by adding const/final keyword
-  const constantList = ["Jamalpur","Mirpur","Dhanmondi"];
+  const constantList = ["Jamalpur", "Mirpur", "Dhanmondi"];
 
   //adding two lists into one
   var addedList = city + constantList;
   //or
   city.addAll(constantList);
-  print("Concated List: "+ addedList.toString());
-  print("Concated List: "+ city.toString());
+  print("Concated List: " + addedList.toString());
+  print("Concated List: " + city.toString());
 
   /* List add method will push the newly added value at the end of the list
      to add new value at a specific index in a list we have to use insert
@@ -62,7 +62,7 @@ void main() {
   print(city.toString());
 
   //updating a particular index value in a list
-  city[0]="updation";
+  city[0] = "updation";
   print(city.toString());
   //printing mixedList
   print("Mixed List: " + mixedList.toString());
