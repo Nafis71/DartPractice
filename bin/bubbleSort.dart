@@ -1,7 +1,7 @@
 
 var array = [1, 5, 9, 10, 2, 4, 3];
 
-List<int> bubbleSort(List<int> array) {
+bubbleSort(List<int> array) {
   for (int i = 0; i < array.length; i++) {
     for (int j = 0; j < array.length - 1; j++) {
       if (array[j] > array[j + 1]) {
