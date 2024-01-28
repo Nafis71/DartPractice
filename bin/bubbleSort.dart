@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 var array = [1, 5, 9, 10, 2, 4, 3];
 
