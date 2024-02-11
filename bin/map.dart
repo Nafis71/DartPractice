@@ -1,3 +1,5 @@
+import 'forInLoop.dart';
+
 var student = {
   "name": "Nafis Hasan Tonmoy",
   "age": 25,                    //All keys in the map must be unique
@@ -52,4 +54,15 @@ main() {
   //clear map
   person.clear();
   print(person);
+
+  var myMap ={
+    'Name':[{'name':'Dhaka','Age':19},{'name':'Barishal','Age':21}],
+    'Age':19,
+    'city':'Manikganj'
+  };
+  var mapList = myMap['Name'] as List;
+  print(mapList[1]['name']);
+  for(var name in mapList){
+     print(name['name']);
+  }
 }
