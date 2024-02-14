@@ -30,7 +30,7 @@ main() {
   print(student);
 
   //creating map with constructor;
-  var person = new Map(); //  or typecasting - Map<String,String> person =  new Map();
+  var person = new Map(); //  or statically typed - Map<String,String> person =  new Map();
 
   //adding key and value to the map
   person.putIfAbsent("name", () => "Tonmoy");
