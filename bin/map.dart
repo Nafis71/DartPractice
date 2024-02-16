@@ -1,8 +1,11 @@
+
 var student = {
   "name": "Nafis Hasan Tonmoy",
   "age": 25, //All keys in the map must be unique
   "dept": "CSE"
 };
+
+
 
 main() {
   //printing all elements in map
