@@ -30,6 +30,7 @@ void main() {
 
   //removing an element from the list by value
   city.removeWhere((element) => element == "Dhaka");
+  city.forEach((element) => print("City Name- $element"));
 
   print("Modified List: " + city.toString());
 
