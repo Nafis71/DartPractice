@@ -1,4 +1,4 @@
-var city = ["Dhaka", "Mymenshingh", "Rajshahi", "Barishal"];
+var city = ["Dhaka","Dhaka", "Mymenshingh", "Rajshahi", "Barishal"];
 var mixedList = ["Dhaka", 1200];
 
 void main() {
@@ -26,13 +26,13 @@ void main() {
 
   //reversing the list
   var reversedList = city.reversed;
-  print("Revered list:" + reversedList.toString());
+  print("Reversed list:" + reversedList.toString());
 
   //removing an element from the list by value
-  var modifiedList = city.remove("Dhaka");
-  if (modifiedList) {
-    print("Modified List: " + city.toString());
-  }
+  city.removeWhere((element) => element == "Dhaka");
+
+  print("Modified List: " + city.toString());
+
 
   //removing an element from the list by index
   var removedValue = city.removeAt(0);
