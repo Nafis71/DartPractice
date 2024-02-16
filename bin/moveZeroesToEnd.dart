@@ -1,4 +1,4 @@
-List<int> moveZeroesToEnd(List<int> listOfNumbers) {
+List<int> moveZeroesToEnd(List<int> listOfNumbers) { //two pointers approach
   int start = 0;
   int end = listOfNumbers.length - 1;
   while (start < end) {
@@ -13,7 +13,7 @@ List<int> moveZeroesToEnd(List<int> listOfNumbers) {
       end--;
     }
     start++;
-  }
+  } //time complexity O(n);
   return listOfNumbers;
 }
 
