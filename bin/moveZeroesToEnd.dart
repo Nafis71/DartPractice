@@ -8,9 +8,8 @@ List<int> moveZeroesToEnd(List<int> listOfNumbers) { //two pointers approach
     }
     if (listOfNumbers[start] == 0) {
       int temp = listOfNumbers[end];
-      listOfNumbers[end] = listOfNumbers[start];
+      listOfNumbers[end--] = listOfNumbers[start];
       listOfNumbers[start] = temp;
-      end--;
     }
     start++;
   } //time complexity O(n);
