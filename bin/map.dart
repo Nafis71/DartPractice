@@ -1,8 +1,6 @@
-import 'forInLoop.dart';
-
 var student = {
   "name": "Nafis Hasan Tonmoy",
-  "age": 25,                    //All keys in the map must be unique
+  "age": 25, //All keys in the map must be unique
   "dept": "CSE"
 };
 
@@ -11,15 +9,15 @@ main() {
   print("All Values : " + student.toString());
 
   //printing specific key in map
-  print("Student's Name: "+ student['name'].toString());
-  print("Student's age: "+ student['age'].toString());
+  print("Student's Name: " + student['name'].toString());
+  print("Student's age: " + student['age'].toString());
 
   //printing the length of the map
   var length = student.length;
-  print("Length of the map: "+ length.toString());
+  print("Length of the map: " + length.toString());
 
   //check if the map is empty or not
-  if(student.isEmpty){
+  if (student.isEmpty) {
     print("The map is empty");
   } else {
     print("The map is not empty");
@@ -30,7 +28,8 @@ main() {
   print(student);
 
   //creating map with constructor;
-  var person = new Map(); //  or statically typed - Map<String,String> person =  new Map();
+  var person =
+      new Map(); //  or statically typed - Map<String,String> person =  new Map();
 
   //adding key and value to the map
   person.putIfAbsent("name", () => "Tonmoy");
@@ -50,19 +49,21 @@ main() {
   person.remove("age");
   print(person);
 
-
   //clear map
   person.clear();
   print(person);
 
-  var myMap ={
-    'Name':[{'name':'Dhaka','Age':19},{'name':'Barishal','Age':21}],
-    'Age':19,
-    'city':'Manikganj'
+  var myMap = {
+    'Name': [
+      {'name': 'Dhaka', 'Age': 19},
+      {'name': 'Barishal', 'Age': 21}
+    ],
+    'Age': 19,
+    'city': 'Manikganj'
   };
   var mapList = myMap['Name'] as List;
   print(mapList[1]['name']);
-  for(var name in mapList){
-     print(name['name']);
+  for (var name in mapList) {
+    print(name['name']);
   }
 }
