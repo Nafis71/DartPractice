@@ -21,7 +21,7 @@ Map<String, dynamic> getSortedMapByValue(Map<String, dynamic> mapOfProducts) {
       mapOfProducts.entries.toList()
         ..sort((firstEntry, secondEntry) =>
             firstEntry.value.compareTo(secondEntry.value)));
-  return sortedMap; //returning sorted map
+  return sortedMap;
 }
 
 void main() {
