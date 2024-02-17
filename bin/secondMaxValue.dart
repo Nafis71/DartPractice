@@ -13,6 +13,6 @@ int getSecondMax(List<int> listOfNumbers){
 }
 
 void main(){
-  List<int> listOfNumbers = [13,34,2,34,33,33,1,35];
+  List<int> listOfNumbers = [13,34,2,34,33,33,36,35];
   print("Second Maximum Number is - ${getSecondMax(listOfNumbers)}");
 }
