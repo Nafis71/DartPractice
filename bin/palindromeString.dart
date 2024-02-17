@@ -15,7 +15,7 @@ bool isPalindrome(String word) {
     end--;
   }
   return true;
-}
+} //time complexity O(n)
 
 main() {
   String word = "madam";
