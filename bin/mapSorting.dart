@@ -1,8 +1,11 @@
-Map<String,dynamic> getSortedMapByKey(Map<String, dynamic> mapOfProducts){
-  Map<String, dynamic> sortedMap = Map.fromEntries(mapOfProducts.entries.toList()
-    ..sort((firstEntry,secondEntry)=> firstEntry.key.compareTo(secondEntry.key)));
+Map<String, dynamic> getSortedMapByKey(Map<String, dynamic> mapOfProducts) {
+  Map<String, dynamic> sortedMap = Map.fromEntries(
+      mapOfProducts.entries.toList()
+        ..sort((firstEntry, secondEntry) =>
+            firstEntry.key.compareTo(secondEntry.key)));
   return sortedMap;
 }
+
 /*
 "mapOfProducts.entries": Gets the set of key-value pairs (entries) from the original map.
 
@@ -13,14 +16,20 @@ The sort method is provided with a comparator function that compares the keys of
 
 "Map.fromEntries(...)": Finally, creates a new map (sortedMap) using the sorted list of entries.
  */
-Map<String,dynamic> getSortedMapByValue(Map<String,dynamic> mapOfProducts){
-  Map<String,dynamic> sortedMap = Map.fromEntries(mapOfProducts.entries.toList()
-    ..sort((firstEntry,secondEntry) => firstEntry.value.compareTo(secondEntry.value)));
-  return sortedMap;
+Map<String, dynamic> getSortedMapByValue(Map<String, dynamic> mapOfProducts) {
+  Map<String, dynamic> sortedMap = Map.fromEntries(
+      mapOfProducts.entries.toList()
+        ..sort((firstEntry, secondEntry) =>
+            firstEntry.value.compareTo(secondEntry.value)));
+  return sortedMap; //returning sorted map
 }
 
-void main(){
-  Map<String, dynamic> mapOfProducts = {"ProductOne": 100,"ProductTwo": 50,"ProductThree":40};
+void main() {
+  Map<String, dynamic> mapOfProducts = {
+    "ProductOne": 100,
+    "ProductTwo": 50,
+    "ProductThree": 40
+  };
   print("Sorting a map by its key: ${getSortedMapByKey(mapOfProducts)}");
   print("Sorting a map by its value: ${getSortedMapByValue(mapOfProducts)}");
 }
