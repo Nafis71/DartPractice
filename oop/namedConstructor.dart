@@ -8,7 +8,7 @@ class Person {
     //this is default constructor;
   }
 
-  Person.second(String name, int age, [this.salary = 0]) {
+  Person.secondConstructor(String name, int age, [this.salary = 0]) {
     this.name = name;
     this.age = age;
   }
@@ -35,7 +35,7 @@ main() {
   String name = stdin.readLineSync()!;
   print("Enter Person's Age : ");
   int age = int.tryParse(stdin.readLineSync()!) ?? 0;
-  Person secondPerson = Person.second(name, age);
+  Person secondPerson = Person.secondConstructor(name, age);
   print("Enter Person's Salary: ");
   secondPerson.setSalary = int.tryParse(stdin.readLineSync()!) ?? 0;
   print("Person's Name: ${secondPerson.getName}");
