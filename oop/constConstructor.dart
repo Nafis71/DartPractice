@@ -8,7 +8,7 @@ class Customer{
   final String name;
   final int age;
   final int phone;
-  const Customer({required this.name, required this.age,required this.phone});
+  const Customer({required this.name, required this.age, required this.phone});
   String get getName{
     return name;
   }
