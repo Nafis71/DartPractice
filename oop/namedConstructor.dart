@@ -4,7 +4,7 @@ class Person {
   late int age;
   late int salary;
 
-  Person([this.age = 0, this.name = null, this.salary = 0]) {
+  Person([this.age = 0, this.name = null, this.salary = 0]) { //formal initialization using [];
     //this is default constructor;
   }
 
