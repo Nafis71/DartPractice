@@ -15,6 +15,7 @@ class Customer{
   int get getAge{
     return age;
   }
+  
   int get getPhone{
     return phone;
   }
