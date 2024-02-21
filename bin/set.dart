@@ -1,5 +1,5 @@
 var myCitySet = <String>{'Dhaka', 'Barishal'};
-
+Set intSet = {1,4,2,0};
 main() {
   /*
   Set is the unordered collection of the different values of the same type
@@ -9,6 +9,8 @@ main() {
    */
   //printing whole set
   print(myCitySet);
+  print(intSet);
+  intSet.add(-1);
 
   // to add elements in the set
   myCitySet.add("Jamalpur");
