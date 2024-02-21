@@ -6,7 +6,7 @@ class Laptop {
 
   Laptop(this.price, this.brand); //positional parameter
 
-                      //named parameter
+                      //named optional parameter
   Laptop.secondConst({required this.price, required this.brand, required String operatingSystem}){
     this._operatingSystem = operatingSystem;
   }

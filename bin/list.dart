@@ -53,7 +53,6 @@ void main() {
   city.addAll(constantList);
   print("Concated List: " + addedList.toString());
   print("Concated List: " + city.toString());
-
   /* List add method will push the newly added value at the end of the list
      to add new value at a specific index in a list we have to use insert
      method.
