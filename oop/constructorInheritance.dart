@@ -22,5 +22,6 @@ class MACBook extends Laptop{  //child class
 main(){
   MACBook macBook = MACBook(100,"Apple", "Red");
   //here constructor of parent class is called before the child class
+  //
   macBook.display();
 }
