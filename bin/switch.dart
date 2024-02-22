@@ -15,5 +15,5 @@ main(){
     default :
       print("Wrong Input");
       break;
-  }
+  } //merge
 }
