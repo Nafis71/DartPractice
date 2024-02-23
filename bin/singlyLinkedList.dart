@@ -5,14 +5,13 @@ class LinkedList {
   late int _data;
   late LinkedList? _next;
 
-  LinkedList(int data) {
-    this._data = data;
+  LinkedList(this._data) {
     this._next = null;
   }
 }
 
 void displayData() {
-  if(head == null){
+  if (head == null) {
     print("List is empty");
   }
   LinkedList? current = head;
@@ -23,7 +22,7 @@ void displayData() {
 }
 
 int length() {
-  if(head == null){
+  if (head == null) {
     return 0;
   }
   int count = 0;
@@ -35,35 +34,35 @@ int length() {
   return count;
 }
 
-void insertFirst(int value){
+void insertFirst(int value) {
   LinkedList newNode = LinkedList(value);
   newNode._next = head;
   head = newNode;
-  if(tail == null){
+  if (tail == null) {
     tail = newNode;
   }
 }
 
-void insertLast(int value){
+void insertLast(int value) {
   LinkedList newNode = LinkedList(value);
-  if(head == null){
+  if (head == null) {
     head = newNode;
     tail = newNode;
-  }else{
+  } else {
     tail!._next = newNode;
     tail = newNode;
   }
 }
 
-void insertAt(int value, int position){
+void insertAt(int value, int position) {
   LinkedList newNode = LinkedList(value);
-  if(position == 1){
+  if (position == 1) {
     newNode._next = head;
     head = newNode;
-  } else{
+  } else {
     LinkedList? previousNode = head;
     int count = 1;
-    if(count < position -1){
+    while (count < position - 1) {
       previousNode = previousNode?._next;
       count++;
     }
@@ -73,11 +72,67 @@ void insertAt(int value, int position){
   }
 }
 
+void deleteFirst() {
+  if (head == null) {
+    return;
+  }
+  LinkedList? nextNode = head!._next;
+  head?._next = null;
+  head = nextNode;
+}
+
+void deleteLast() {
+  if (head == null || head?._next == null) {
+    head = null;
+    return;
+  }
+  LinkedList? current = head;
+  LinkedList? secondLastNode = null;
+  while (current?._next != null) {
+    secondLastNode = current;
+    current = current?._next;
+  }
+  secondLastNode?._next = null;
+}
+
+void deleteAt(int position) {
+  if (head == null) {
+    return;
+  }
+  if (position == 1 && head != null) {
+    if (head?._next == null) {
+      head = null;
+      return;
+    } else {
+      head = head?._next;
+      ;
+      return;
+    }
+  }
+  LinkedList? currentNode = head;
+  LinkedList? previousNode = null;
+  int count = 1;
+  while (count < position) {
+    previousNode = currentNode;
+    currentNode = currentNode?._next;
+    count++;
+  }
+  if (currentNode?._next == null) {
+    previousNode?._next = currentNode?._next;
+    tail = previousNode;
+    return;
+  }
+  previousNode?._next = currentNode?._next;
+}
 
 main() {
   insertFirst(5);
   insertLast(6);
-  insertAt(7, 3);
+  insertLast(9);
+  deleteAt(3);
+  insertLast(8);
+  insertLast(2);
+
   displayData();
   print("Size of the linked list: ${length()}");
 }
