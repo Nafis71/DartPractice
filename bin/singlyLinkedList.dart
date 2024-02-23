@@ -55,10 +55,29 @@ void insertLast(int value){
   }
 }
 
+void insertAt(int value, int position){
+  LinkedList newNode = LinkedList(value);
+  if(position == 1){
+    newNode._next = head;
+    head = newNode;
+  } else{
+    LinkedList? previousNode = head;
+    int count = 1;
+    if(count < position -1){
+      previousNode = previousNode?._next;
+      count++;
+    }
+    LinkedList? current = previousNode!._next;
+    newNode._next = current;
+    previousNode._next = newNode;
+  }
+}
+
 
 main() {
   insertFirst(5);
   insertLast(6);
+  insertAt(7, 3);
   displayData();
   print("Size of the linked list: ${length()}");
 }
