@@ -157,5 +157,6 @@ main() {
   linkedList.insertLast(2);
   linkedList.delete(8);
   linkedList.displayData();
+  //changed
   print("Size of the linked list: ${linkedList.length()}");
 }
