@@ -135,11 +135,11 @@ class LinkedList {
     while(current != null) {
       position++;
       if (value == current._data) {
-        break;
+        deleteAt(position);
       }
       current = current._next;
     }
-    deleteAt(position);
+
   }
 }
 
