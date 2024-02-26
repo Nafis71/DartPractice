@@ -1,4 +1,4 @@
-//poly mean many and morphism means many forms
+//poly means many and morphism means many forms
 
 class Animal{
   void eat(){
