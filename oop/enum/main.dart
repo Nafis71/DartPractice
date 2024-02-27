@@ -11,8 +11,8 @@ main(){
   print("All the values of days enum : ${Days.values}");
   Days day = Days.Saturday;
   print("Specific value of days enum : ${day.name}");
-  Person personeOne = Person("Tonmoy", Gender.Male);
+  Person personOne = Person("Tonmoy", Gender.Male);
   Person personTwo = Person("Nubla", Gender.Female);
-  print("1st Person's Gender : ${personeOne.gender.name}");
+  print("1st Person's Gender : ${personOne.gender.name}");
   print("2nd Person's Gender : ${personTwo.gender.name}");
 }
