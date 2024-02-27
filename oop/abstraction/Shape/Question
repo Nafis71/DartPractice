@@ -1,0 +1,2 @@
+Define an abstract class called Shape with an abstract method area().
+Create two subclasses, Circle and Rectangle, that inherit from Shape and implement the area() method.
