@@ -3,6 +3,10 @@ class Person{
   late int age;
   late String _gender;
 
+  void display(){
+    //for overriding
+  }
+
   String get getGender => (this._gender);
   void set setGender(String gender) => (this._gender = gender);
 }
@@ -14,6 +18,8 @@ class Student extends Person{
     super.age = age;
     super.setGender = gender;
   }
+
+  @override
   void display(){
     print("Student's Name: ${super.name}");
     print("Student's Age: ${super.age}");
