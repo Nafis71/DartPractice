@@ -27,7 +27,7 @@ class MACBook extends Laptop {
 
   // MACBook(super.price, super.brand){
   // }
-  MACBook(int price, String brand, this.color) : super(price, brand);
+  MACBook(super.brand, super.price, this.color);
 
   MACBook.secondConst(
       int price, String brand, this.color, String operatingSystem)
