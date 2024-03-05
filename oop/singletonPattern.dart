@@ -1,18 +1,35 @@
 class Person{
-  Person._(){
-    //private constructor is needed.
-  }
-  static Person? instance = null;
+  //privateConstructor
+  Person._();
+  static Person? _instance = null;
   static Person getInstance(){
-    if(instance == null){
-      instance = new Person._();
+    if(_instance == null){
+      _instance = new Person._();
     }
-    return instance!;
+    return _instance!;
   }
 }
+
+class MySingleton{
+  static MySingleton? _instance = null;
+  //privateConstructor
+  MySingleton._();
+  factory MySingleton(){
+    if(_instance == null){
+      _instance = MySingleton._();
+    }
+    return _instance!;
+  }
+}
+
 main(){
   Person person = Person.getInstance();
   Person personTwo = Person.getInstance();
   print(person.hashCode);
   print(personTwo.hashCode);
+
+  MySingleton singletonOne = MySingleton();
+  MySingleton singletonTwo = MySingleton();
+  print(singletonOne.hashCode);
+  print(singletonTwo.hashCode);
 }
