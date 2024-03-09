@@ -2,17 +2,15 @@ main(){
   List<int> myNumbers = [1,2,3,4,5];
   try{
     printList(myNumbers);
-  } on IndexOutOfBound catch (e){
-    print(e.toString());
-  }catch(e){
-    print(e.toString());
+  }finally{
+    print("Tonmoy");
   }
 
 }
 
 void printList(List<int> myNumbers){
   try{
-    for(int i= 0; i<10; i++){
+    for(int i= 0; i<myNumbers.length; i++){
       print(myNumbers[i]);
     }
   } catch(e){
