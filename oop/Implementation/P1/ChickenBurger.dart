@@ -6,4 +6,9 @@ class ChickenBurger implements Burger{
     print("Cooking chicken burger");
   }
 
+  @override
+  void tonmoy() {
+    // TODO: implement tonmoy
+  }
+
 }

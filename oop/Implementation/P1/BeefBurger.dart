@@ -1,9 +1,8 @@
 import 'Burger.dart';
 
-class BeefBurger implements Burger{
+class BeefBurger extends Burger{
   @override
   void cookBerger() {
     print("Cooking beef burger");
   }
-
 }
