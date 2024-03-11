@@ -23,7 +23,7 @@ void printList(List<int> myNumbers){
   }
 }
 
-//just for push
+//just for push.
 
 class IndexOutOfBound implements Exception{
     @override
