@@ -2,9 +2,8 @@ main(){
   List<int> myNumbers = [1,2,3,4,5];
   try{
     printList(myNumbers);
-  }
-  catch(e){
-    print(e.toString());
+  } on IndexOutOfBound{
+
   }
   finally{
     print("Exception Handled");
