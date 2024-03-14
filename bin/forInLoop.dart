@@ -8,7 +8,7 @@ main() {
   Note :
   for loop and for in loop  is also called
   entry controlled loop.
-  and while and do while loop is exit controlled loop
+  and while and do while loop is exit controlled loop.
    */
   list.add("Tonmoy");
   list.add("Rupanti");
