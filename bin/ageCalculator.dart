@@ -23,5 +23,36 @@ void calculateAge(List<String> parts){
 
   DateTime currentDate = DateTime.now();
   DateTime birthDate = DateTime(year,month,day);
-  print("Your age : ${currentDate.year - birthDate.year}");
+  late int age;
+  if(currentDate.month != birthDate.month) {
+    age = (currentDate.year - birthDate.year) - 1;
+  } else{
+    age = currentDate.year - birthDate.year;
+  }
+  int ageMonth = calculateMonths(birthDate: birthDate, currentDate: currentDate);
+  int ageDays = calculateDays(birthDate: birthDate, currentDate: currentDate);
+  print("$age years $ageMonth months $ageDays days");
+}
+
+int calculateMonths({required DateTime birthDate, required DateTime currentDate}){
+  if(birthDate.month != currentDate.month){
+    if(birthDate.month > currentDate.month){
+      return birthDate.month - currentDate.month;
+    } else{
+      return currentDate.month - birthDate.month;
+    }
+  }else{
+    return 0;
+  }
+}
+int calculateDays({required DateTime birthDate, required DateTime currentDate}){
+  if(birthDate.day != currentDate.day){
+    if(birthDate.day > currentDate.day){
+      return birthDate.day - currentDate.day;
+    } else{
+      return currentDate.day - birthDate.day;
+    }
+  }else{
+    return 0;
+  }
 }
