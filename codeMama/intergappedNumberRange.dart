@@ -13,8 +13,8 @@ StringBuffer getNumberRange(int l1, int r1, int l2, int r2) {
 }
 
 main() {
-  String input = stdin.readLineSync()!;
-  List<String> values = input.split(" ");
+  String input = stdin.readLineSync() ?? "0";
+  List<String> values = input.split(" ",);
   int l1 = int.tryParse(values[0]) ?? 0;
   int r1 = int.tryParse(values[1]) ?? 0;
   int l2 = int.tryParse(values[2]) ?? 0;
