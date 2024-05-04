@@ -4,13 +4,13 @@ int getCars(int totalWheels, int totalCarBodies, int totalFigures) {
   int leastPossibleCars = totalWheels ~/ 4;
   int leastCarBodies = totalCarBodies ~/ 1;
   int leastFigures = totalFigures ~/ 2;
-  leastPossibleCars = (leastCarBodies < leastPossibleCars)
-      ? leastCarBodies
-      : leastPossibleCars;
-  leastPossibleCars = (leastFigures < leastPossibleCars)
-      ? leastFigures
-      : leastPossibleCars;
-  return leastPossibleCars;
+  return (leastCarBodies < leastPossibleCars)
+      ? (leastFigures < leastCarBodies)
+          ? leastFigures
+          : leastCarBodies
+      : (leastFigures < leastPossibleCars)
+          ? leastFigures
+          : leastPossibleCars;
 }
 
 main() {
