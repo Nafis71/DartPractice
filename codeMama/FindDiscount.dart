@@ -1,8 +1,7 @@
 import 'dart:io';
 
 double calculateDiscount(int originalPrice, int discount) {
-  double discountAmount = originalPrice * (discount / 100);
-  return originalPrice - discountAmount;
+  return originalPrice - (originalPrice * (discount / 100));
 }
 
 main() {
